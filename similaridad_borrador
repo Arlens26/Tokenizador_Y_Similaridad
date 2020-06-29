@@ -1,0 +1,114 @@
+import math
+import numpy as np 
+import matplotlib.pyplot as plt
+
+# Declaración de vectores
+doc1 = [27,3,0,14]
+doc2 = [4,33,33,0]
+doc3 = [24,0,29,17]
+q = np.array([13,0,0,22]) # car, auto, insure y best
+d = np.array([doc1,doc2,doc3])
+# Número de términos
+N = d.shape[0]
+print("Número de términos: "+str(N))
+
+print("## Función Sim(q,d) - Col1 car y Col2 best")
+
+for i in range(N):
+	u = []
+	v = []
+	suma = q + d[i]
+	raiz = np.sqrt(q*q + d[i]*d[i])
+
+	# Unicamnte vectores car y best
+	vec_suma = np.array([suma[0], suma[3]])  # Posición 0 equivale a car
+	vec_raiz = np.array([raiz[0], raiz[3]])	 # Posición 3 equivale a best
+	sim = np.array(vec_suma/vec_raiz)
+
+	# Similaridad del coseno
+	sum_coseno = (sim[0]+sim[1])
+	coseno = sum_coseno/(np.sqrt(sum_coseno)*np.sqrt(sum_coseno))
+	docx = i + 1
+	print("############  Documento: "+str(docx)+" ################")
+	print(sim)
+	print("Similaridad del coseno")	
+	print(coseno)
+
+#plt.plot(sim[i],0)
+
+# Dibujo de vectores
+#plt.quiver(sim[0], 0, u, v,  angles='xy', scale_units='xy', scale=1)
+plt.show()
+
+
+----------------------------------------------------------------------------------------
+
+import math
+import numpy as np 
+import matplotlib.pyplot as plt
+
+
+doc1 = [27,3,0,14]
+doc2 = [4,33,33,0]
+doc3 = [24,0,29,17]
+q = np.array([13,0,0,22]) # car, auto, insure y best
+d = np.array([doc1,doc2,doc3])
+N = d.shape[0]
+
+'''for i in range(N):
+	suma = q + '''
+
+
+
+'''suma = d[0] + d[1] 
+print(suma)
+# termino car
+tf_x = np.array([d[i, :] / np.sum(d, axis=0)[i] for i in range(N)])
+print(tf_x)
+# termino best
+tf_y  = np.array([d[i, :] / np.sum(d, axis=1)[i] for i in range(N)])
+Sprint(tf_y)'''
+
+print("## Función Sim(q,d) - Col1 car y Col2 best")
+
+for i in range(N):
+	u = []
+	v = []
+	suma = q + d[i]
+	raiz = np.sqrt(q*q + d[i]*d[i])
+	# Unicamnte vectores car y best
+	vec_suma = np.array([suma[0], suma[3]])  # Posición 0 equivale a car
+	vec_raiz = np.array([raiz[0], raiz[3]])	 # Posición 3 equivale a best
+	sim = np.array(vec_suma/vec_raiz)
+	#print(vec_suma)
+	#plt.plot(sim, [0,0])
+	#plt.plot(2,0)	
+	sum_coseno = (sim[0]+sim[1])
+	coseno = sum_coseno/(np.sqrt(sum_coseno)*np.sqrt(sum_coseno))
+	docx = i + 1
+	print("############  Documento: "+str(docx)+" ################")
+	print(sim)
+	print("Similaridad del coseno")	
+	print(coseno)
+
+### Ejemplo de dibujo
+'''x = np.array(range(20))*0.1
+y = np.zeros(len(x))
+for i in range(len(x)):
+	y[i] = math.sin(x[i])'''
+
+#plt.plot(sim[i],0)
+#plt.quiver(sim[0], 0, u, v,  angles='xy', scale_units='xy', scale=1)
+plt.show()
+#print(sim[0])
+	
+
+'''doc1 = np.array([27,3,0,14])
+doc2 = np.array([4,33,33,0])
+doc3 = np.array([24,0,29,17])'''
+
+# 
+#w = np.array([doc1,doc2,doc3])
+#N = w.shape[0]
+#print("N term:"+str(N)+" Matriz:"+str(w))
+

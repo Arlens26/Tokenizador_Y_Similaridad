@@ -1,0 +1,19 @@
+Esto es una prueba hola mundo
+
+Esto es una <sep>prueba y hola<cls> mundo
+
+Tweet Iván Cepeda Castro
+
+############# Para palabras #################
+‘Ñeñe’ política: ¿Quién es la asesora de Uribe implicada en el escándalo?  http://tinyurl.com/vo9a8hr vía @@elespectador
+
+############# Subpalabras - Con tilde #####################
+‘Ñeñe’ política: <sep>¿Quién es la asesora de Uribe implicada <cls>en el escándalo?
+
+
+############# Subpalabras - Sin tilde ########################
+‘Ñeñe’ politica: <sep>¿Quien es la asesora de Uribe implicada <cls>en el escándalo?
+
+############# Subpalabras - sin tilde y minúscula #####################
+‘neñe’ politica: <sep>¿quien es la asesora de uribe implicada <cls>en el escandalo?
+
